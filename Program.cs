@@ -8,7 +8,7 @@
             regex.RegexEx();
             
             
-            regex.PhoneNumber("91 9886844497");
+            
 
             while (true)
             {
@@ -31,6 +31,10 @@
                         break;
                     case 3:
                         regex.EmailValidation();
+                        Console.WriteLine("--------------------------");
+                        break;
+                    case 4:
+                        regex.PhoneNumber("91 9886844497");
                         Console.WriteLine("--------------------------");
                         break;
 
