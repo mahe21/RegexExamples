@@ -69,5 +69,20 @@ namespace RegexDemo
                 Console.WriteLine("its different");
             }
         }
+
+        public void EmailValidation()
+        {
+            Console.WriteLine("Enter the Email Address");
+            string email = Console.ReadLine();
+            string emailAddress = "^[A-Za-z0-9]{3,}([.][a-zA-z]+)?[@][A-Za-z]+[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";
+            if (Regex.IsMatch(email, emailAddress))
+            {
+                Console.WriteLine("Email Address is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Email Address is invalid");
+            }
+        }
     }
 }

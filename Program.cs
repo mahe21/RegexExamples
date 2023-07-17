@@ -29,6 +29,11 @@
                         regex.CheckLastName("Kumar");
                         Console.WriteLine("--------------------------");
                         break;
+                    case 3:
+                        regex.EmailValidation();
+                        Console.WriteLine("--------------------------");
+                        break;
+
 
                 }
             }
