@@ -89,8 +89,8 @@ namespace RegexDemo
         {
             Console.WriteLine("Enter the Password");
             string password = Console.ReadLine();
-            string pass = "^[0-9A-Za-z@#$%&!]{8,}$";
-            if (Regex.IsMatch(pass, password))
+            string pass = "^[A-Z]{1}[0-9A-Za-z@#$%&!]{8,}$";
+            if (Regex.IsMatch(password, pass))
             {
                 Console.WriteLine("Password is valid");
             }
