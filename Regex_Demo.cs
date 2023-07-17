@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace RegexDemo
 {
@@ -18,6 +19,48 @@ namespace RegexDemo
         {
             Regex regex = new Regex(pattern);
             if(regex.IsMatch("cen") )
+            {
+                Console.WriteLine("its a match");
+            }
+            else
+            {
+                Console.WriteLine("its different");
+            }
+        }
+
+        public void CheckPattern(string name)
+        {
+            string myName = "^[A-Z][a-z]{3,}?";
+            
+            if (Regex.IsMatch(name,myName))
+            {
+                Console.WriteLine("its a match");
+            }
+            else
+            {
+                Console.WriteLine("its different");
+            }
+        }
+
+        public void CheckLastName(string name)
+        {
+            string myName = "^[A-Z][a-z]{3,}?";
+
+            if (Regex.IsMatch(name, myName))
+            {
+                Console.WriteLine("its a match");
+            }
+            else
+            {
+                Console.WriteLine("its different");
+            }
+        }
+
+        public void PhoneNumber(string number)
+        {
+            string myNumber = "^[0-9]{2}[][0-9]{10}$";
+
+            if (Regex.IsMatch(number, myNumber))
             {
                 Console.WriteLine("its a match");
             }
