@@ -56,19 +56,7 @@ namespace RegexDemo
             }
         }
 
-        public void PhoneNumber(string number)
-        {
-            string myNumber = "^[0-9]{2}[][0-9]{10}$";
-
-            if (Regex.IsMatch(number, myNumber))
-            {
-                Console.WriteLine("its a match");
-            }
-            else
-            {
-                Console.WriteLine("its different");
-            }
-        }
+       
 
         public void EmailValidation()
         {
@@ -84,5 +72,33 @@ namespace RegexDemo
                 Console.WriteLine("Email Address is invalid");
             }
         }
+        public void PhoneNumber(string number)
+        {
+            string myNumber = "^[0-9]{2}[][0-9]{10}$";
+
+            if (Regex.IsMatch(number, myNumber))
+            {
+                Console.WriteLine("its a match");
+            }
+            else
+            {
+                Console.WriteLine("its different");
+            }
+        }
+        public void PasswordValidation()
+        {
+            Console.WriteLine("Enter the Password");
+            string password = Console.ReadLine();
+            string pass = "^[0-9A-Za-z@#$%&!]{8,}$";
+            if (Regex.IsMatch(pass, password))
+            {
+                Console.WriteLine("Password is valid");
+            }
+            else
+            {
+                Console.WriteLine("Password is invalid");
+            }
+        }
+
     }
 }

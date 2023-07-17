@@ -17,6 +17,9 @@
                 Console.WriteLine("Choose correct  options");
                 Console.WriteLine("1:First Name");
                 Console.WriteLine("2:Last Name");
+                Console.WriteLine("3:Email Validation");
+                Console.WriteLine("4:PhoneNumber Validation");
+                Console.WriteLine("5:Password Validation");
                 int choice = Convert.ToInt32(Console.ReadLine());
 
                 switch (choice)
@@ -35,6 +38,10 @@
                         break;
                     case 4:
                         regex.PhoneNumber("91 9886844497");
+                        Console.WriteLine("--------------------------");
+                        break;
+                    case 5:
+                        regex.PasswordValidation();
                         Console.WriteLine("--------------------------");
                         break;
 
